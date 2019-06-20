@@ -1,4 +1,5 @@
 """ Main application and routing logic for TwitOff. """
+import os
 from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
@@ -43,5 +44,11 @@ def create_app():
         return render_template('compare.html', title='Prediction',
                                 tweet_text=tweet_text, predictions=predictions,
                                 user1=user1, user2=user2)
+
+    @app.route('/reset') # remove for production
+    def reset():
+        DB.drop_all()
+        DB.create_all()
+        return render_template('base.html', title='DB Reset', users=[])
 
     return app
