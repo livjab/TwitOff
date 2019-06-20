@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c097b4a3c5664a64f665a8935ff76c8e7cd66b663db092c7a72f14db092f06f1"
+            "sha256": "1692ebe6d8430d68807683c2318303adfc09901189009c0923d8c2d6d89b81ce"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -67,6 +67,13 @@
             ],
             "index": "pypi",
             "version": "==19.9.0"
+        },
+        "heroku": {
+            "hashes": [
+                "sha256:cbeba42b628bc38504d49ace86b8c1729ab2156e530fb1823954988932c8f7fb"
+            ],
+            "index": "pypi",
+            "version": "==0.1.4"
         },
         "idna": {
             "hashes": [
@@ -202,6 +209,12 @@
                 "sha256:d9031ea45fdfacbe59a99273e9f0448ddb33c1580fe3831c1b09557c5718977c"
             ],
             "version": "==1.7.0"
+        },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:6f197348b46fb8cdf9f3fcfc2a7d5a97da95db3e2e8667cf657216274fe1b009"
+            ],
+            "version": "==1.5"
         },
         "python-decouple": {
             "hashes": [
