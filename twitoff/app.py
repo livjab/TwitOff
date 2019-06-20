@@ -39,8 +39,9 @@ def create_app():
         user1 = request.values['user1']
         user2 = request.values['user2']
         tweet_text = request.values['tweet_text']
-        prediction = predict_user(user1, user2, tweet_text)
+        predictions = predict_user(user1, user2, tweet_text)
         return render_template('compare.html', title='Prediction',
-                                tweet_text=tweet_text, prediction=prediction)
+                                tweet_text=tweet_text, predictions=predictions,
+                                user1=user1, user2=user2)
 
     return app

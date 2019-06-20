@@ -8,7 +8,17 @@
   <h3>Tweet: "{{ tweet_text }}"</h3>
 </div>
 <div>
-  <p> {{ prediction }}</p>
+  {% if predictions[0] == 0 %}
+  <h4>{{ user2 }}</h4>
+  {% else %}
+  <h4>{{ user1 }}</h4>
+  {% endif %}
+  <p>Probability:</p>
+  {% if predictions[0] == 0 %}
+  <p>{{ predictions[1] }}</p>
+  {% else %}
+  <p>{{ 1 - predictions[1] }}</p>
+  {% endif %}
 </div>
 
 {% endblock %}
