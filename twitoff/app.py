@@ -9,7 +9,7 @@ from .predict import predict_user
 def create_app():
     """ Create and configure an instance of the Flask application."""
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     #app.config['ENV'] = config['ENV']
     DB.init_app(app)
