@@ -33,6 +33,7 @@ def create_app():
             tweets = User.query.filter(User.name == name).one().tweets
         except Exception as e:
             message = 'Error adding {}: {}'.format(name, e)
+            tweets = []
         return render_template('user.html', title=name, tweets=tweets, message=message)
 
     @app.route('/compare', methods=['POST'])
